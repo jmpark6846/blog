@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>준모의 개발블로그  | 2019.08.02</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.55.6" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="2019.08.02" />
+<meta property="og:description" content="1. &lt;head&gt; 안에 &lt;link&gt;를 넣는 이유 페이지가 처음 로드되면 html 과 css 가 동시에 로드되어, 페이지의 컨텐츠를 우선 화면에 보여줄 수 있게 된다. 이렇게 될 경우 사용자경험도 상승하고, progressive rendering을 할 수 있게 해준다.
+2. &lt;/body&gt; 직전에 &lt;script&gt;를 넣는 이유 스크립트가 다운로드 되고 실행되는 동안 html 파싱을 차단. 스크립트를 아래에 두면 html을 먼저 파싱해서 사용자에게 보여줄 수 있다.
+3. progressive rendering 페이지의 컨텐츠를 빠르게 표시하기 위한 기술을 말함. html과 css를 먼저 로드하여 페이지에 컨텐츠를 빨리 그리도록 한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jmpark6846.github.io/til/2019-08-02/" />
+<meta property="article:published_time" content="2019-08-02T18:56:50&#43;09:00"/>
+<meta property="article:modified_time" content="2019-08-02T18:56:50&#43;09:00"/>
+
+<meta itemprop="name" content="2019.08.02">
+<meta itemprop="description" content="1. &lt;head&gt; 안에 &lt;link&gt;를 넣는 이유 페이지가 처음 로드되면 html 과 css 가 동시에 로드되어, 페이지의 컨텐츠를 우선 화면에 보여줄 수 있게 된다. 이렇게 될 경우 사용자경험도 상승하고, progressive rendering을 할 수 있게 해준다.
+2. &lt;/body&gt; 직전에 &lt;script&gt;를 넣는 이유 스크립트가 다운로드 되고 실행되는 동안 html 파싱을 차단. 스크립트를 아래에 두면 html을 먼저 파싱해서 사용자에게 보여줄 수 있다.
+3. progressive rendering 페이지의 컨텐츠를 빠르게 표시하기 위한 기술을 말함. html과 css를 먼저 로드하여 페이지에 컨텐츠를 빨리 그리도록 한다.">
+
+
+<meta itemprop="datePublished" content="2019-08-02T18:56:50&#43;09:00" />
+<meta itemprop="dateModified" content="2019-08-02T18:56:50&#43;09:00" />
+<meta itemprop="wordCount" content="385">
+
+
+
+<meta itemprop="keywords" content="html,css,client rendering,server rendering,javascript engine," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="2019.08.02"/>
+<meta name="twitter:description" content="1. &lt;head&gt; 안에 &lt;link&gt;를 넣는 이유 페이지가 처음 로드되면 html 과 css 가 동시에 로드되어, 페이지의 컨텐츠를 우선 화면에 보여줄 수 있게 된다. 이렇게 될 경우 사용자경험도 상승하고, progressive rendering을 할 수 있게 해준다.
+2. &lt;/body&gt; 직전에 &lt;script&gt;를 넣는 이유 스크립트가 다운로드 되고 실행되는 동안 html 파싱을 차단. 스크립트를 아래에 두면 html을 먼저 파싱해서 사용자에게 보여줄 수 있다.
+3. progressive rendering 페이지의 컨텐츠를 빠르게 표시하기 위한 기술을 말함. html과 css를 먼저 로드하여 페이지에 컨텐츠를 빨리 그리도록 한다."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jmpark6846.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      준모의 개발블로그
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        TILS
+      </p>
+      <h1 class="f1 athelas mb1">2019.08.02</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-08-02T18:56:50&#43;09:00">August 2, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h3 id="1-head-안에-link-를-넣는-이유">1. <code>&lt;head&gt;</code> 안에 <code>&lt;link&gt;</code>를 넣는 이유</h3>
+
+<p>페이지가 처음 로드되면 html 과 css 가 동시에 로드되어, 페이지의 컨텐츠를 우선 화면에 보여줄 수 있게 된다. 이렇게 될 경우 사용자경험도 상승하고, progressive rendering을 할 수 있게 해준다.</p>
+
+<h3 id="2-body-직전에-script-를-넣는-이유">2. <code>&lt;/body&gt;</code> 직전에 <code>&lt;script&gt;</code>를 넣는 이유</h3>
+
+<p>스크립트가 다운로드 되고 실행되는 동안 html 파싱을 차단. 스크립트를 아래에 두면 html을 먼저 파싱해서 사용자에게 보여줄 수 있다.</p>
+
+<h3 id="3-progressive-rendering">3. progressive rendering</h3>
+
+<p>페이지의 컨텐츠를 빠르게 표시하기 위한 기술을 말함. html과 css를 먼저 로드하여 페이지에 컨텐츠를 빨리 그리도록 한다. 이미지 지연 로딩이 있다. 페이지의 이미지를 한꺼번에 로드하지 않고, 사용자가 스크롤 하여 화면에 보여질때 로딩한다.</p>
+
+<h3 id="4-이미지-태그의-srcset-속성은-어디-쓰이나">4. 이미지 태그의 <code>srcset</code> 속성은 어디 쓰이나</h3>
+
+<p>기기 디스플레이 너비에 따라 다른 크기 혹은 해상도의 이미지를 제공할때 쓰인다.</p>
+
+<h3 id="5-cors">5. cors</h3>
+
+<p>cors는 여러 도메인 간에 리소스를 공유할 수 있도록 하는 표준이다. 타 도메인에서 리소스를 요청하는 경우 cross-origin http 요청이 된다. 그런데 대부분 브라우저에서 보안상의 이유로 cross-origin-http 요청을 제한한다. http 헤더에 허용되는 도메인을 추가하여 동작하도록 한다.</p>
+
+<h3 id="6-preflight">6. preflight</h3>
+
+<p>실제 요청을 보내기전에 서버에게 확인하는 작업을 하는 요청을 preflight request 라고 한다. 예를 들면 브라우저는 해당 도메인으로 cors가 허용되는지 확인하기 위해 서버에게 preflight 요청을 보낸다. 답변은 헤더에 기록하여 캐쉬할 수 있다. option method 사용한다.</p>
+
+<h3 id="7-크로스-브라우징">7. 크로스 브라우징</h3>
+
+<p>웹 표준에 따라 개발하여 서로 다른 플랫폼과 os에 대응하는 것을 말한다. 웹사이트를 비슷하게 만들어 어떤 환경에서도 이상없이 작동되게 만드는 것을 뜻한다.</p>
+
+<h3 id="8-reset-css-or-normalize-css">8. reset.css (or normalize.css)</h3>
+
+<p>7번 크로스 브라우징 관련. 각 브라우저나 os 마다 기본 스타일이 다를 수 있다. 동일한 스타일 적용을 위해 디폴트값을 초기화 또는 일반화하는 css를 말한다.</p>
+
+<h3 id="9-클라이언트-렌더링과-서버-렌더링">9. 클라이언트 렌더링과 서버 렌더링</h3>
+
+<p>렌더링은 결국 dom 트리를 만들어 화면에 보여주는 것을 말한다. 이것을 서버에서 하느냐 클라이언트에서 하느냐에 따라 달라지는 것이다.
+서버에서 렌더링할 경우 매 요청마다 전체 돔트리를 다시 만들기 때문에 그만큼 응답시간이 느려진다. 클라이언트 렌더링은 우선 전체 돔을 한번 그린다. 그 이후부터는 데이터가 변동되는 부분만 자바스크립트가 다시 그리기 때문에 반응속도 등 인터렉션이 좋아진다.
+그런데 클라이언트 렌더링을 해주는 프레임워크가 등장하고 점점 기능이 거대해지자 초기 로딩 속도가 느려졌다. 또한 검색엔진 최적화가 안된다는 치명적인 단점이 있다. 왜냐면 검색 봇이 자바스크립트를 읽지 못하기 때문이다.</p>
+
+<h3 id="10-자바스크립트-엔진과-싱글-스레드">10. 자바스크립트 엔진과 싱글 스레드</h3>
+
+<p>자바스크립트 엔진은 자바스크립트 코드를 해석하고 실행하는 인터프리터다. 구글이 만든 V8엔진이 대표적이다. 크게 콜스택, 테스크 큐, 힙 세 가지 영역으로 나뉜다.
+자바스크립트는 함수가 실행되면 콜스택에 push된다. 실행이 완료되면 pop된다. 일반 스택의 동작과 동일하다. 비동기 작업의 경우 테스크 큐에 enqueue된다. 그러다 콜스택이 전부 비워지면 그때 하나씩 dequeue되어 순차적으로 실행된다.</p>
+
+<p>이렇게 보면 웹 기술은 모바일의 발전과 거기에 맞게 효율적이고 사용자경험을 증진할 수 있는 방향으로 조금씩 발전해온 것 같다.</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/html" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">html</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/css" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">css</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/client-rendering" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">client rendering</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/server-rendering" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">server rendering</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/javascript-engine" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">javascript engine</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jmpark6846.github.io" >
+    &copy; 2019 준모의 개발블로그
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

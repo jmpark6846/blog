@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>준모의 개발블로그</title>
+    <link>https://jmpark6846.github.io/</link>
+    <description>Recent content on 준모의 개발블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 04 Aug 2019 16:53:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://jmpark6846.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019.08.04</title>
+      <link>https://jmpark6846.github.io/til/2019-08-04/</link>
+      <pubDate>Sun, 04 Aug 2019 16:53:23 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-08-04/</guid>
+      <description>호이스팅  변수나 함수의 선언과 할당을 분리하여 선언을 해당 영역의 상단에 위치하도록 변경하는 걸 의미한다.
+ 정확한 의도? 는 잘모르겠으나 자바스크립트 인터프리터가 선언을 먼저 처리하고 할당은 런타임에서 처리하기 때문이라는 글을 본 것 같다.
+ var 키워드를 사용하면 호이스팅이 발생한다. let/const를 사용하면 발생하지 않음. 마찬가지로 함수선언식을 사용하면 발생하지만 함수표현식을 사용하면 발생하지 않음.
+ 최대한 발생하지 않도록 하는 것이 좋음.
+  var 가 아닌 let / const 를 사용해야 하는 이유  var 를 사용하면 스코프가 꼬일 확률이 높아진다.</description>
+    </item>
+    
+    <item>
+      <title>2019.08.02</title>
+      <link>https://jmpark6846.github.io/til/2019-08-02/</link>
+      <pubDate>Fri, 02 Aug 2019 18:56:50 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-08-02/</guid>
+      <description>1. &amp;lt;head&amp;gt; 안에 &amp;lt;link&amp;gt;를 넣는 이유 페이지가 처음 로드되면 html 과 css 가 동시에 로드되어, 페이지의 컨텐츠를 우선 화면에 보여줄 수 있게 된다. 이렇게 될 경우 사용자경험도 상승하고, progressive rendering을 할 수 있게 해준다.
+2. &amp;lt;/body&amp;gt; 직전에 &amp;lt;script&amp;gt;를 넣는 이유 스크립트가 다운로드 되고 실행되는 동안 html 파싱을 차단. 스크립트를 아래에 두면 html을 먼저 파싱해서 사용자에게 보여줄 수 있다.
+3. progressive rendering 페이지의 컨텐츠를 빠르게 표시하기 위한 기술을 말함. html과 css를 먼저 로드하여 페이지에 컨텐츠를 빨리 그리도록 한다.</description>
+    </item>
+    
+    <item>
+      <title>2019.08.01</title>
+      <link>https://jmpark6846.github.io/til/2019-08-01/</link>
+      <pubDate>Thu, 01 Aug 2019 13:41:00 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-08-01/</guid>
+      <description> useEffect hook  이름처럼 side effect를 실행하는 코드를 작성하는 hook이다. useEffect의 특징 가운데 한가지는 컴포넌트의 생애주기 별로 나눠 생각하지 않고, 렌더링 된 후 실행된다는 점이다. 컴포넌트가 언마운트될 때 실행되는 함수를 작성하려면 useEffect의 리턴값으로 함수를 넘긴다. 다른 훅과 마찬가지로 useEffect는 함수 컴포넌트 안에서만 사용되어야한다. 클래스 컴포넌트에서는 사용될 수 없다. 그리고 일반 함수에서는 사용될 수 없다.  </description>
+    </item>
+    
+    <item>
+      <title>2019.07.31</title>
+      <link>https://jmpark6846.github.io/til/2019-07-31/</link>
+      <pubDate>Wed, 31 Jul 2019 19:20:53 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-31/</guid>
+      <description> react context api  context api 를 활용하면 여러 컴포넌트들 끼리 명시적으로 props를 통해 데이터를 넘겨주지 않고도 값을 공유할 수 있다. context 생성하면 Provider 와 Consumer 크게 두 가지 역할로 나뉜다. Provider는 값을 context를 구독하는 컴포넌트들에게 context의 변화를 알리는 역할 Consumer는 context의 변화를 구독하는 컴포넌트. 함수형 컴포넌트에서 컨텍스트에 접근하는 데 사용한다. 클래스 컴포넌트에서는 consumer를 대신하는 녀석이 &amp;lt;클래스 컴포넌트명&amp;gt;.contextType이다. 이렇게 지정하면 this.context 로 컨텍스트에 접근할 수 있다.  </description>
+    </item>
+    
+    <item>
+      <title>2019.07.24</title>
+      <link>https://jmpark6846.github.io/til/2019-07-24/</link>
+      <pubDate>Wed, 24 Jul 2019 23:50:59 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-24/</guid>
+      <description> 리엑트 클래스 컴포넌트에서 한 요소에 직접 접근할때 ref를 사용한다. 부모 컴포넌트에서 자식 컴포넌트에 접근할때는 props를 이용하지만, 직접 접근하고 싶은 특별한 경우에 사용. 나는 carousel slider 써드파티 라이브러리를 사용하다가 직접 왼쪽, 오른쪽 슬라이드 넘기는 버튼을 만들어야 했는데, 그때 버튼과 슬라이드 메소드를 연결시키기 위해 사용했다.  </description>
+    </item>
+    
+    <item>
+      <title>2019.07.23</title>
+      <link>https://jmpark6846.github.io/til/2019-07-23/</link>
+      <pubDate>Tue, 23 Jul 2019 21:48:45 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-23/</guid>
+      <description>오늘은 다시 리엑트를 공부했다. 리엑트는 어느 정도 알고있기 때문에, 처음부터 다시 공부하기 보다 우선 내가 알고있는 것을 가지고 작은 연습 프로젝트를 해보기로 했다. 개발자에게 영화 API 를 무료 티어로 제공하는 곳이 있어 간단한 &amp;lsquo;넷플릭스&amp;rsquo; 클론을 만들어보기로 했다. 코딩을 하면서 토이 프로젝트를 할때, 의식의 흐름대로 하면 자꾸 산으로 가기 떄문에 어떤 규칙이 필요하다고 생각했다.  복잡해지기 전에 미리 컴포넌트부터 쪼개지 않기 =&amp;gt; 처음엔 여러가지 방식으로 시도를 해보기 때문에 파일을 쪼갰다가 지웠다가 반복.</description>
+    </item>
+    
+    <item>
+      <title>2019 07 19</title>
+      <link>https://jmpark6846.github.io/til/2019-07-19/</link>
+      <pubDate>Fri, 19 Jul 2019 20:14:59 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-19/</guid>
+      <description> 오늘은 강의를 보며 CoreML과 CreateML, Vision 등을 실습했다. 데이터만 충분하다면 머신러닝에 대한 지식이 없어도 iOS에 사용된 머신러닝 기능을 사용하여 앱에 구현할 수 있다. 강아지, 토끼, 고양이 사진을 구분하는 이미지 인식 앱은 정말 1시간도 안되서 만들었다. 그만큼 기술이 사용하기 쉽게 이미 만들어져있다.  </description>
+    </item>
+    
+    <item>
+      <title>2019.07.18</title>
+      <link>https://jmpark6846.github.io/til/2019-07-18/</link>
+      <pubDate>Thu, 18 Jul 2019 20:44:22 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-18/</guid>
+      <description>guard 문  if 처럼, bool expression에 따라 실행할지 말지 결정할때 사용하는 statement이다. if 와 반대로 거짓일 때 실행된다. if나 if let을 사용하다보면 조건을 명시하기가 까다롭거나 코드 블럭이 여러번 중첩되는 경우가 있는데, 이를 해결하기 위해 guard를 사용한다.   출처 - https://ericcerney.com/swift-guard-statement/</description>
+    </item>
+    
+    <item>
+      <title>2019.07.17</title>
+      <link>https://jmpark6846.github.io/til/2019-07-17/</link>
+      <pubDate>Wed, 17 Jul 2019 20:40:42 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-17/</guid>
+      <description>2019.07.17
+ UserDefaults
+ 기본적인 타입의 데이터를 담는 Key-Value Dictionary 각 애플리케이션 샌드박스 내의 plist 파일로 저장된다. 데이터베이스로 사용하는 것은 좋지 않다. 복잡한 데이터는 저장 못하도록 막는 등 여러 상황에서 동작하지 않을 수 있고 접근할때마다 파일 전체를 불러오므로 성능 문제가 생긴다.   싱글턴 패턴
+ 한 프로그램 혹은 한 클래스 내에서 공유하는 자원에 대해 어디서든지 접근 가능한 만드는 변수를 만드는 패턴이다. 즉 특정 데이터를 전역 변수로 만들어 관리하는 패턴. 로그나 오디오 채널, http 전송 모듈 등에 사용할 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>2019.07.16</title>
+      <link>https://jmpark6846.github.io/til/2019-07-16/</link>
+      <pubDate>Tue, 16 Jul 2019 20:11:53 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-16/</guid>
+      <description> TableView에서 셀은 화면에 보여지는 만큼만 생성되고, 메모리 내에서 계속 재사용된다.
+ 클로져
+ 함수 내에서 사용되는 함수를 뜻한다. 함수 자체도 클래스이기 때문에 파라메터로 넘길 수 있고, 리턴값으로 받을 수도 있다. 클로져는 자주 사용되어 in 키워드, chaining function 을 사용해서 줄일 수 도 잇다. 클로져 내에서 밖의 함수에 있는 메소드나 프로퍼티를 사용하려면 self 키워드를 사용한다.   </description>
+    </item>
+    
+    <item>
+      <title>2019.07.15</title>
+      <link>https://jmpark6846.github.io/til/2019-07-15/</link>
+      <pubDate>Mon, 15 Jul 2019 20:25:14 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-15/</guid>
+      <description> View Controller간 데이터를 주고 받을때는 각 컨트롤러의 메소드만 사용하면, 세그웨이로 prepare 메소드 실행 시 매번 새 컨트롤러 오브젝트가 생성되는 문제가 생긴다. 이때는 컨트롤러의 메소드만을 사용하는 것이 아니라 protocol을 정의 해서 Delegation Pattern을 사용한다.  </description>
+    </item>
+    
+    <item>
+      <title>2019.07.13</title>
+      <link>https://jmpark6846.github.io/til/2019-07-13/</link>
+      <pubDate>Sat, 13 Jul 2019 20:54:38 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-13/</guid>
+      <description>오늘은 Udemy로 수강중인 iOS 개발 부트캠프 강좌를 보며 계속 공부했다. Udemy 강좌는 여러개 작은 프로젝트를 만들면서 공부하도록 되어있다. 따라히기도 쉽고, 직접 개발하면서 배우는 거라 공부가 잘된다. nil  파이썬이나 자바스크립트에서 자주 사용했던 null값을, swift에선 (nil값을) 사용하지 않도록 디자인되어있다. 만약 앱 내에서 nil 값에 접근한다면 런타임에러가 난다. 이유는 프로그램을 보다 안전하게 만들기 위해서다. 이 개념이 매우 흥미로웠다.  Optional ?  간단하게 말하면, 어떤 변수가 &amp;ldquo;값 or nil&amp;rdquo; 이라는 것을 나타내는 키워드이다.</description>
+    </item>
+    
+    <item>
+      <title>2019.07.12</title>
+      <link>https://jmpark6846.github.io/til/2019-07-12/</link>
+      <pubDate>Fri, 12 Jul 2019 21:45:13 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-12/</guid>
+      <description> Swift 로 iOS 개발을 하다가 써드파티 라이브러리로 Objective-C 코드를 사용하려면, 관련 코드를 프로젝트 폴더 내에 첨부한다. 그리고 Objective C로 Bridging Header를 추가하면 Swift 코드에서 사용할 수 있다. (xcode 자동 추가) React Native 와 Flutter를 보다가 Swift로 iOS앱 개발을 하니 확실히 다르다. 전자 쪽에선 가볍게 휙휙 만들고 얼른 결과를 보자 라는 방식이었다면 후자는 같은 걸 만들어도 좀 더 공들여 만들어야하는 느낌이다.  </description>
+    </item>
+    
+  </channel>
+</rss>

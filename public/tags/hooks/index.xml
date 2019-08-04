@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hooks on 준모의 개발블로그</title>
+    <link>https://jmpark6846.github.io/tags/hooks/</link>
+    <description>Recent content in hooks on 준모의 개발블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 01 Aug 2019 13:41:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://jmpark6846.github.io/tags/hooks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019.08.01</title>
+      <link>https://jmpark6846.github.io/til/2019-08-01/</link>
+      <pubDate>Thu, 01 Aug 2019 13:41:00 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-08-01/</guid>
+      <description> useEffect hook  이름처럼 side effect를 실행하는 코드를 작성하는 hook이다. useEffect의 특징 가운데 한가지는 컴포넌트의 생애주기 별로 나눠 생각하지 않고, 렌더링 된 후 실행된다는 점이다. 컴포넌트가 언마운트될 때 실행되는 함수를 작성하려면 useEffect의 리턴값으로 함수를 넘긴다. 다른 훅과 마찬가지로 useEffect는 함수 컴포넌트 안에서만 사용되어야한다. 클래스 컴포넌트에서는 사용될 수 없다. 그리고 일반 함수에서는 사용될 수 없다.  </description>
+    </item>
+    
+  </channel>
+</rss>
