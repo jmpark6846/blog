@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vision on 준모의 개발블로그</title>
+    <link>https://jmpark6846.github.io/tags/vision/</link>
+    <description>Recent content in Vision on 준모의 개발블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 19 Jul 2019 20:14:59 +0900</lastBuildDate>
+    
+	<atom:link href="https://jmpark6846.github.io/tags/vision/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019 07 19</title>
+      <link>https://jmpark6846.github.io/til/2019-07-19/</link>
+      <pubDate>Fri, 19 Jul 2019 20:14:59 +0900</pubDate>
+      
+      <guid>https://jmpark6846.github.io/til/2019-07-19/</guid>
+      <description> 오늘은 강의를 보며 CoreML과 CreateML, Vision 등을 실습했다. 데이터만 충분하다면 머신러닝에 대한 지식이 없어도 iOS에 사용된 머신러닝 기능을 사용하여 앱에 구현할 수 있다. 강아지, 토끼, 고양이 사진을 구분하는 이미지 인식 앱은 정말 1시간도 안되서 만들었다. 그만큼 기술이 사용하기 쉽게 이미 만들어져있다.  </description>
+    </item>
+    
+  </channel>
+</rss>
